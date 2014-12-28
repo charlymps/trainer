@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Beginning of vm "repo" configuration section
   config.vm.define "repo" do |repovm|
-    repovm.vm.box      = "centos6.4"
+    repovm.vm.box      = "rhel6.5-base"
     repovm.vm.hostname = "repo"
     repovm.vm.network :private_network, ip: "192.168.17.101"
   end
@@ -21,7 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Beginning of vm "monitor" configuration section
   config.vm.define "monitor" do |monitorvm|
-    monitorvm.vm.box      = "centos6.4"
+    monitorvm.vm.box      = "rhel6.5-base"
     monitorvm.vm.hostname = "monitor" 
     monitorvm.vm.network :private_network, ip: "192.168.17.102"
   end
@@ -29,7 +29,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Beginning of vm "test" configuration section
   config.vm.define "test" do |testvm|
-    testvm.vm.box = "centos6.4" 
+    testvm.vm.box = "rhel6.5-base" 
     testvm.vm.hostname = "test" 
     testvm.vm.network :private_network, ip: "192.168.17.103"
   end
